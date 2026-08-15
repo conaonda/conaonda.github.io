@@ -1,33 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="conaonda — 위성·센서·AI로 지구를 읽는 공간지능 연구 포트폴리오">
+  <meta name="description" content="박진혁의 위성영상·GEOINT·공간지능 연구 및 엔지니어링 포트폴리오">
+  <meta name="theme-color" content="#07131e">
+  <link rel="canonical" href="https://conaonda.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="conaonda — Read Earth. Build Intelligence.">
+  <meta property="og:description" content="위성·센서·AI로 지구를 읽고, 작동하는 공간지능 시스템을 만듭니다.">
+  <meta property="og:url" content="https://conaonda.github.io/">
+  <meta property="og:image" content="https://conaonda.github.io/assets/earth-observation-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <title>conaonda — Read Earth. Build Intelligence.</title>
   <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jinhyeok Park",
+      "alternateName": "박진혁",
+      "url": "https://conaonda.github.io/",
+      "sameAs": ["https://github.com/conaonda"],
+      "knowsAbout": [
+        "Satellite imagery",
+        "GEOINT",
+        "Photogrammetry",
+        "Geospatial software",
+        "Artificial intelligence"
+      ]
+    }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
-<header class="masthead"><a class="wordmark" href="#top" aria-label="conaonda 홈">conaonda</a><nav aria-label="주요 탐색"><a href="#research">Research</a><a href="#systems">Systems</a><a href="#open-source">Open source</a><a class="atlas-link" href="https://wiki.conaonda.workers.dev">Conaonda Wiki ↗</a></nav></header>
+
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="conaonda 홈">conaonda</a>
+    <nav aria-label="주요 탐색">
+      <a href="#research">Research</a>
+      <a href="#systems">Systems</a>
+      <a href="#open-source">Open source</a>
+      <a class="atlas-link" href="https://wiki.conaonda.workers.dev">Wiki <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
   <main id="main">
     <section id="top" class="hero" aria-labelledby="hero-title">
-      <picture><source srcset="assets/earth-observation-hero.webp" type="image/webp"><img src="assets/earth-observation-hero.png" width="2048" height="1152" alt="위성 관측을 연상시키는 어두운 푸른 지구 표면 이미지" fetchpriority="high"></picture>
-      <div class="hero-shade"></div><div class="hero-copy"><p class="eyebrow">GEOSPATIAL RESEARCH / AI-NATIVE EARTH INTELLIGENCE</p><h1 id="hero-title">Read Earth.<br><em>Build Intelligence.</em></h1><p>위성·센서·AI로 지구를 읽고, 작동하는 공간지능 시스템을 만듭니다.</p><a class="button" href="#research">연구 궤적 보기 <span aria-hidden="true">↓</span></a></div><p class="hero-index" aria-hidden="true">01 / OBSERVE</p>
+      <picture>
+        <source srcset="assets/earth-observation-hero.avif" type="image/avif">
+        <source srcset="assets/earth-observation-hero.webp" type="image/webp">
+        <img src="assets/earth-observation-hero.png" width="1672" height="941" alt="위성 관측을 연상시키는 어두운 푸른 지구 표면 이미지" fetchpriority="high">
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Read Earth.<br><em>Build Intelligence.</em></h1>
+        <p class="hero-intro">위성·센서·AI로 지구를 읽고, 작동하는 공간지능 시스템을 만듭니다.</p>
+        <p class="hero-identity"><strong>박진혁 <span>Jinhyeok Park</span></strong><span>Geospatial Software · AI · GEOINT</span></p>
+        <div class="hero-actions">
+          <a class="button" href="#research">연구 기록 보기 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/conaonda" rel="me">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
-    <section class="manifesto" aria-labelledby="ax-title"><p class="section-label">A CONTINUING LINE</p><div><h2 id="ax-title">conaonda의<br><i>AX</i> 지향.</h2><p>conaonda는 <strong>AX</strong> —AI Transformation, 인공지능 전환—를 지향합니다. 복잡한 지표와 영상을 읽어 쓸모 있는 공간의 언어로 바꾸려는 탐구는 계속됩니다.</p></div></section>
-    <section id="research" class="research" aria-labelledby="research-title"><div class="section-head"><p class="section-label">RESEARCH RECORD</p><h2 id="research-title">영상에서 지도로,<br>지도에서 <em>공간지능</em>으로.</h2><p>가시화, 재구성, 이종 센서, 벡터 추출을 연결하는 다섯 가지 연구입니다.</p></div>
-      <article class="story story-feature"><div class="story-no">01</div><div><p class="tag">WEB / RASTER PIPELINE</p><h3>On-the-fly<br>Pan-sharpening</h3><p>COG(Cloud Optimized GeoTIFF)와 WebGL을 결합해 브라우저에서 팬샤프닝을 가시화하는 방식을 다뤘습니다. 사전 생성·저장을 줄이고, 클라이언트 렌더링으로 다중 사용자 환경의 서버 연산 부담을 분산하는 구조입니다.</p></div><aside aria-label="연구 초점"><span>COG</span><span>WebGL</span><span>client-side rendering</span></aside></article>
-      <article class="story"><div class="story-no">02</div><div><p class="tag">LEARNING / MAPPING VALIDATION</p><h3>Satellite super-resolution,<br>tested for mapping.</h3><p>위성영상 특화 딥러닝 초해상화 모델을 설계·학습하고, 생성 영상으로 RPC 오차 보정과 포인트 클라우드·DSM 생성을 위한 지도를 제작했습니다. 원본 영상 기반 결과와 비교해 정확도 유지 또는 향상을 검증했습니다.</p></div></article>
-      <article class="story"><div class="story-no">03</div><div><p class="tag">MULTI-SENSOR / IMAGE TRANSLATION</p><h3>Night sensing,<br>translated to daylight.</h3><p>야간 라이다 강도·거리영상과 열적외영상을 주간 광학 영상으로 모의했습니다. CycleGAN, CUT, UNSB, CycleGAN-turbo를 비교했고, 시각적 분석과 SSIM·PSNR·UIQI 평가에서 CycleGAN이 구조와 색상 매핑에 가장 안정적인 결과를 보였습니다.</p></div></article>
-      <article class="story"><div class="story-no">04</div><div><p class="tag">VECTOR EXTRACTION / EVALUATION</p><h3>Buildings, made<br>measurable as polygons.</h3><p>산업용 위성영상 데이터셋에서 Frame Field Learning, PolyWorld, HiSup을 비교했습니다. 새 라벨링 테스트셋과 AP, IoU, C-IoU, PoLiS, MTA 지표를 활용했으며, Frame Field Learning이 가장 우수한 객체 추출 성능을 보였습니다.</p></div></article>
-      <article class="story"><div class="story-no">05</div><div><p class="tag">PATENT / 3D RECONSTRUCTION</p><h3>Satellite imagery<br>into 3D space.</h3><p>특허로 제안한 3차원 공간 재구축 시스템입니다. 스테레오 위성영상에서 AI로 지붕면을 추출하고, 수량에 따라 픽셀 분할 크기를 최적화합니다. 지상좌표·수직 입면으로 건물 메시를 만들고, 텍스처와 지형 메시를 병합합니다.</p></div></article>
+
+    <section class="manifesto" aria-labelledby="ax-title">
+      <p class="section-label">A continuing line</p>
+      <div>
+        <h2 id="ax-title">conaonda의<br><i>AX</i> 지향.</h2>
+        <p>conaonda는 <strong>AX</strong> —AI Transformation, 인공지능 전환—를 지향합니다. 복잡한 지표와 영상을 읽어 쓸모 있는 공간의 언어로 바꾸려는 탐구는 계속됩니다.</p>
+      </div>
     </section>
-    <section id="systems" class="systems" aria-labelledby="systems-title"><div><p class="section-label">CAPABILITY SYSTEM</p><h2 id="systems-title">A research practice<br>that crosses layers.</h2></div><dl><div><dt>Observe</dt><dd>Satellite imagery<br>LiDAR · thermal sensing</dd></div><div><dt>Interpret</dt><dd>Deep learning<br>Image-to-image translation</dd></div><div><dt>Reconstruct</dt><dd>RPC · point cloud · DSM<br>3D building mesh</dd></div><div><dt>Deliver</dt><dd>COG · WebGL<br>Browser-native visualization</dd></div></dl></section>
-    <section id="open-source" class="open-source" aria-labelledby="oss-title"><p class="section-label">SELECTED OPEN SOURCE</p><h2 id="oss-title">Tools left in the open.</h2><div class="repo-list"><a href="https://github.com/conaonda/COGnito"><span>COGnito</span><small>Public repository</small><b>↗</b></a><a href="https://github.com/conaonda/SatVLM"><span>SatVLM</span><small>Public repository</small><b>↗</b></a><a href="https://github.com/conaonda/OpenLayersJP2Provider"><span>OpenLayersJP2Provider</span><small>Public repository</small><b>↗</b></a><a href="https://github.com/conaonda/RIFT"><span>RIFT</span><small>Public repository</small><b>↗</b></a><a href="https://github.com/conaonda/semi-global-matching"><span>semi-global-matching</span><small>Public repository</small><b>↗</b></a></div></section>
-<section class="atlas" aria-labelledby="atlas-title"><p class="section-label">CONAONDA WIKI</p><h2 id="atlas-title">Notes, systems,<br>and an <em>open atlas.</em></h2><p>연구와 운영의 맥락을 이어가는 개인 지식 공간입니다.</p><a class="button light" href="https://wiki.conaonda.workers.dev">Conaonda Wiki 열기 ↗</a></section>
+
+    <section id="research" class="research" aria-labelledby="research-title">
+      <div class="section-head">
+        <p class="section-label">4 papers · 1 patent</p>
+        <div>
+          <h2 id="research-title">영상에서 지도로,<br>지도에서 <em>공간지능</em>으로.</h2>
+          <p>논문 네 편과 등록특허 한 건으로 이어진 연구 궤적입니다. 원문 확인이 가능한 논문은 DOI를 함께 표기했습니다.</p>
+        </div>
+      </div>
+
+      <article class="story story-feature">
+        <div class="story-year">2026</div>
+        <div class="story-body">
+          <h3>On-the-fly<br>Pan-sharpening</h3>
+          <p class="tag">Browser raster pipeline</p>
+          <p class="record-title">군 감시정찰 위성영상의 운용 효율 향상을 위한 On-the-fly Pan-sharpening 기법</p>
+          <p>COG(Cloud Optimized GeoTIFF)와 WebGL을 결합해 브라우저에서 팬샤프닝을 가시화하는 방식을 다뤘습니다. 결과 영상을 사전 생성·저장하지 않고 클라이언트 렌더링을 활용해 다중 사용자 환경의 서버 연산 부담을 분산하는 구조입니다.</p>
+          <ul class="record-meta" aria-label="논문 서지 정보">
+            <li>제1저자</li>
+            <li>항공우주시스템공학회 춘계학술대회</li>
+            <li>학술대회 원고</li>
+          </ul>
+          <p class="authors"><strong>박진혁</strong> · 황철환 · 이재영 · 우성훈</p>
+        </div>
+        <aside aria-label="연구 핵심 기술">
+          <span>COG</span>
+          <span>WebGL</span>
+          <span>Client-side rendering</span>
+        </aside>
+      </article>
+
+      <article class="story">
+        <div class="story-year">2025</div>
+        <div class="story-body">
+          <h3>Satellite super-resolution,<br>tested for mapping.</h3>
+          <p class="tag">Learning · mapping validation</p>
+          <p class="record-title">딥러닝 기반 위성영상 초해상화를 통한 지도 제작 유효성 검증</p>
+          <p>위성영상 특화 딥러닝 초해상화 모델을 설계·학습하고, 생성 영상으로 RPC 오차 보정과 포인트 클라우드·DSM 생성을 위한 지도를 제작했습니다. 원본 영상 기반 결과와 비교해 정확도 유지 또는 향상을 검증했습니다.</p>
+          <ul class="record-meta" aria-label="논문 서지 정보">
+            <li>제5저자</li>
+            <li>한국군사과학기술학회지 28(2), 155–163</li>
+            <li><a href="https://doi.org/10.9766/KIMST.2025.28.2.155" aria-label="논문 DOI 10.9766/KIMST.2025.28.2.155 열기">DOI <span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="authors">박재일 · 신상헌 · 곽송연 · 장영찬 · <strong>박진혁</strong></p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-year">2025</div>
+        <div class="story-body">
+          <h3>Night sensing,<br>translated to daylight.</h3>
+          <p class="tag">Multi-sensor image translation</p>
+          <p class="record-title">라이다와 열영상 기반 컬러화 모의</p>
+          <p>야간 라이다 강도·거리영상과 열적외영상을 주간 광학 영상으로 모의했습니다. CycleGAN, CUT, UNSB, CycleGAN-turbo를 비교했고, 시각적 분석과 SSIM·PSNR·UIQI 평가에서 CycleGAN이 구조와 색상 매핑에 가장 안정적인 결과를 보였습니다.</p>
+          <ul class="record-meta" aria-label="논문 서지 정보">
+            <li>제2저자</li>
+            <li>한국측량학회지 43(1), 91–99</li>
+            <li><a href="https://doi.org/10.7848/ksgpc.2025.43.1.91" aria-label="논문 DOI 10.7848/ksgpc.2025.43.1.91 열기">DOI <span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="authors">정지헌 · <strong>박진혁</strong> · 황철환 · 이재현 · 어양담</p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-year">2023</div>
+        <div class="story-body">
+          <h3>Buildings, made<br>measurable as polygons.</h3>
+          <p class="tag">Vector extraction · evaluation</p>
+          <p class="record-title">딥러닝 기반 위성영상 건물 폴리곤 추출 알고리즘 비교 분석</p>
+          <p>산업용 위성영상 데이터셋에서 Frame Field Learning, PolyWorld, HiSup을 비교했습니다. 새 라벨링 테스트셋과 AP, IoU, C-IoU, PoLiS, MTA 지표를 활용했으며, Frame Field Learning이 가장 우수한 객체 추출 성능을 보였습니다.</p>
+          <ul class="record-meta" aria-label="논문 서지 정보">
+            <li>제2저자</li>
+            <li>한국측량학회지 41(5), 321–330</li>
+            <li><a href="https://doi.org/10.7848/ksgpc.2023.41.5.321" aria-label="논문 DOI 10.7848/ksgpc.2023.41.5.321 열기">DOI <span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="authors">최연오 · <strong>박진혁</strong> · 이승우 · 신상헌 · 곽송연</p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-year">2025</div>
+        <div class="story-body">
+          <h3>Satellite imagery<br>into 3D space.</h3>
+          <p class="tag">Registered patent · 3D reconstruction</p>
+          <p class="record-title">3차원 공간 재구축 시스템 및 그 방법</p>
+          <p>공동발명자로 참여한 대한민국 등록특허입니다. 스테레오 위성영상에서 AI로 지붕면을 추출하고, 수량에 따라 픽셀 분할 크기를 최적화합니다. 지상좌표·수직 입면으로 건물 메시를 만들고, 텍스처와 지형 메시를 병합합니다.</p>
+          <ul class="record-meta" aria-label="특허 정보">
+            <li>공동발명</li>
+            <li>등록번호 10-2906155</li>
+            <li>등록 2025.12.26</li>
+          </ul>
+          <p class="authors">발명자: 이승우 · 이진수 · <strong>박진혁</strong> · 황철환 · 신상헌 · 곽송연 · 조은지 · 박재일</p>
+          <p class="rights">특허권자: 대한민국(방위사업청장)</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="systems" class="systems" aria-labelledby="systems-title">
+      <div class="systems-intro">
+        <h2 id="systems-title">A research practice<br>that crosses layers.</h2>
+        <p class="section-label">Capability system</p>
+      </div>
+      <dl>
+        <div><dt>Observe</dt><dd>Satellite imagery<br>LiDAR · thermal sensing</dd></div>
+        <div><dt>Interpret</dt><dd>Deep learning<br>Image-to-image translation</dd></div>
+        <div><dt>Reconstruct</dt><dd>RPC · point cloud · DSM<br>3D building mesh</dd></div>
+        <div><dt>Deliver</dt><dd>COG · WebGL<br>Browser-native visualization</dd></div>
+      </dl>
+    </section>
+
+    <section id="open-source" class="open-source" aria-labelledby="oss-title">
+      <div class="open-source-head">
+        <p class="section-label">Selected open source</p>
+        <h2 id="oss-title">Tools left in the open.</h2>
+      </div>
+      <div class="repo-list">
+        <a href="https://github.com/conaonda/COGnito">
+          <span>COGnito</span>
+          <small>OpenLayers 기반 COG 브라우저 뷰어</small>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="https://github.com/conaonda/SatVLM">
+          <span>SatVLM</span>
+          <small>에어갭 환경을 위한 위성영상 VLM API</small>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="https://github.com/conaonda/OpenLayersJP2Provider">
+          <span>OpenLayersJP2Provider</span>
+          <small>HTTP Range·WASM 기반 JP2 타일 프로바이더</small>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a class="reference-repo" href="https://github.com/conaonda/RIFT">
+          <span>RIFT</span>
+          <small>연구 참조용 미러 · 원저작자 표기</small>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a class="reference-repo" href="https://github.com/conaonda/semi-global-matching">
+          <span>semi-global-matching</span>
+          <small>연구 참조용 미러 · 원저작자 표기</small>
+          <b aria-hidden="true">↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="atlas" aria-labelledby="atlas-title">
+      <h2 id="atlas-title">Notes, systems,<br>and an <em>open atlas.</em></h2>
+      <p class="section-label">Conaonda Wiki</p>
+      <p>연구와 운영의 맥락을 이어가는 개인 지식 공간입니다.</p>
+      <a class="button light" href="https://wiki.conaonda.workers.dev">Conaonda Wiki 열기 <span aria-hidden="true">↗</span></a>
+    </section>
   </main>
-  <footer><a class="wordmark" href="#top">conaonda</a><p>AI-native Earth intelligence, explored with care.</p><p>© <span id="year">2026</span> conaonda</p></footer>
+
+  <footer>
+    <a class="wordmark" href="#top">conaonda</a>
+    <p>AI-native Earth intelligence, explored with care.</p>
+    <p><a href="https://github.com/conaonda" rel="me">GitHub</a> · © <span id="year">2026</span> conaonda</p>
+  </footer>
+
   <script src="assets/site.js"></script>
 </body>
 </html>
